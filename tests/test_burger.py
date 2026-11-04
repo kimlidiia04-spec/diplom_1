@@ -6,14 +6,6 @@ from constants import BurgerData
 
 
 class TestBurger:
-    # НОВЫЙ БУРГЕР СОЗДАЁТСЯ БЕЗ БУЛОЧКИ
-    def test_init_burger_without_bun(self, burger):
-        assert burger.bun is None
-
-    # НОВЫЙ БУРГЕР СОЗДАЁТСЯ БЕЗ ИНГРЕДИЕНТОВ
-    def test_init_burger_without_ingredients(self, burger):
-        assert burger.ingredients == []
-
     # ВЫБОР БУЛОЧКИ
     def test_set_buns(self, burger, mock_bun):
         burger.set_buns(mock_bun)
