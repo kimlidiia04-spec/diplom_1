@@ -6,6 +6,11 @@ from constants import BurgerData
 
 
 class TestBurger:
+    # НОВЫЙ БУРГЕР СОЗДАЁТСЯ БЕЗ БУЛОЧКИ
+    def test_init_burger_without_bun(self, burger):
+        with pytest.raises(AttributeError):
+            burger.get_price()
+      
     # ВЫБОР БУЛОЧКИ
     def test_set_buns(self, burger, mock_bun):
         burger.set_buns(mock_bun)
